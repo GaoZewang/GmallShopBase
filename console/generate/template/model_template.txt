@@ -1,0 +1,44 @@
+<?php
+/**
+ * @Project   Gmall
+ * @File      model_template.php
+ * @Author    MrGao
+ * @Date      2026/2/1 18:18
+ */
+
+namespace app\{{module}}\model;
+
+use app\model\BaseModel;
+
+class {{class}}Model extends BaseModel
+{
+    /**
+     * 与模型关联的表名
+     *
+     * @var string
+     */
+    protected $table = "{{table}}";
+
+    /**
+     * 重定义主键，默认是id
+     *
+     * @var string
+     */
+    protected $primaryKey = 'id';
+
+    /**
+     * 指示是否自动维护时间戳
+     *
+     * @var bool
+     */
+    public $timestamps = true;
+
+    /**
+     * 可批量赋值的字段
+     *
+     * @var array
+     */
+    protected $fillable = [
+        '{{fillable}}'
+    ];
+}

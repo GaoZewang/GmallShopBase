@@ -1,0 +1,18 @@
+<?php
+namespace app\{{module}}\validate;
+use Respect\Validation\Validator as v;
+
+class {{class}}Validate
+{
+     /**
+         * @param $data
+         * @param $scene
+         * @return string|void
+         */
+        public static function validate($data,$scene)
+        {
+            $scenes = [{{rules}}
+            ];
+            v::input($data, $scenes[$scene]);
+        }
+}
